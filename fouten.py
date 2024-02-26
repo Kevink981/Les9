@@ -1,10 +1,13 @@
 import math
 
 def discriminant(a, b, c):
-    D1 = (-b + math.sqrt(b**2 - 4*a*c))/(2 * a)
-    D2 = (-b - math.sqrt(b**2 - 4*a*c))/(2 * a)
-    uitvoer = [D1, D2]
-    return uitvoer
+    try:
+        D1 = (-b + math.sqrt(b**2 - 4*a*c))/(2 * a)
+        D2 = (-b - math.sqrt(b**2 - 4*a*c))/(2 * a)
+        uitvoer = [D1, D2]
+        return uitvoer
+    except ValueError:
+        return ["geen oplossing", "geen oplossing"]
 
 print("Voor de formule ax^2 + bx + c, geef a, b en c:")
 
